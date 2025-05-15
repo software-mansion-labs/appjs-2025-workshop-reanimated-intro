@@ -6,6 +6,7 @@ import { memo, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import Animated, {
+  MeasuredDimensions,
   SharedValue,
   measure,
   runOnJS,
@@ -16,7 +17,6 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
-import type { MeasuredDimensions } from "react-native-reanimated/src/reanimated2/commonTypes";
 
 type TabsProps = {
   name: string;
@@ -29,7 +29,7 @@ const Tab = memo(({ onActive, name, isActiveTabIndex }: TabsProps) => {
   const sendMeasurements = () => {
     runOnUI(() => {
       const measurements = measure(tabRef);
-      runOnJS(onActive)(measurements);
+      runOnJS(onActive)(measurements!);
     })();
   };
 

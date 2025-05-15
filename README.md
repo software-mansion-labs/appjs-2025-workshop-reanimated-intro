@@ -1,4 +1,4 @@
-# The Reanimated Workshop – App.js Conference 2024
+# The Reanimated Workshop – App.js Conference 2025
 
 ## Hosted by
 
@@ -29,19 +29,25 @@ Follow the below steps from the terminal:
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:software-mansion-labs/appjs-2024-workshop-reanimated.git && cd appjs-2024-workshop-reanimated
+git clone git@github.com:software-mansion-labs/appjs-2025-workshop-reanimated-intro.git && cd appjs-2025-workshop-reanimated-intro
 ```
 
 2. Install project dependencies (run the below command from the project main directory):
 
 ```bash
-npm install
+bun install
+```
+
+3. Create a local dev client
+
+```bash
+bun expo prebuild
 ```
 
 3. Launch the app with Expo CLI:
 
 ```bash
-npx expo start
+bun expo start
 ```
 
 4. The above step will print instructions on how to launch the app on phone or simulator. For iOS simulator you'll need to press `"i"`, for Android press `"a"`, and if you'd like to run the app on a physical device you'll need to scan the QR code that will be displayed on the command line output.
@@ -52,7 +58,6 @@ During the workshop we will be using primarily:
 
 - [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/docs/)
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
-- [React Native Skia](https://shopify.github.io/react-native-skia/)
 
 ## Next step
 

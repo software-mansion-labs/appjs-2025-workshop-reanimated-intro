@@ -96,6 +96,9 @@ export function BalloonSliderLesson() {
     })
     .onChange((ev) => {
       const size = measure(aRef);
+      if (!size) {
+        return;
+      }
       x.value = clamp((x.value += ev.changeX), 0, size.width);
       progress.value = 100 * (x.value / size.width);
     })
@@ -113,6 +116,9 @@ export function BalloonSliderLesson() {
     (gravity) => {
       if (gravity !== undefined) {
         const size = measure(aRef);
+        if (!size) {
+          return;
+        }
         x.value = withGravity({
           bounds: [0, size.width],
           acceleration: gravity,

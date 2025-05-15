@@ -1,16 +1,19 @@
 import { Stack } from "expo-router";
 import React from "react";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { View } from "react-native";
+import { gestureHandlerRootHOC } from "react-native-gesture-handler";
 import "react-native-reanimated";
 
-export default function Layout() {
+function Layout() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <View style={{ flex: 1 }}>
       <Stack
         screenOptions={{
           headerShown: false,
         }}
       />
-    </GestureHandlerRootView>
+    </View>
   );
 }
+
+export default gestureHandlerRootHOC(Layout);

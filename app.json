@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "appjsworkshop2025-intro",
-    "slug": "appjsworkshop2025-intro",
+    "name": "appjsworkshop2025intro",
+    "slug": "appjsworkshop2025intro",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,17 +11,18 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "scheme": "appjsworkshop2025-intro",
+    "scheme": "appjsworkshop2025intro",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.anonymous.appjsworkshop2025intro"
     },
     "android": {
+      "edgeToEdgeEnabled": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.appjsworkshop2025-intro"
+      "package": "com.anonymous.appjsworkshop2025intro"
     },
     "web": {
       "favicon": "./assets/favicon.png"

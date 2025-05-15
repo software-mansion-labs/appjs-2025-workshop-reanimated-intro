@@ -1,8 +1,8 @@
+import React from "react";
 import { Platform, Pressable, StyleSheet, Text, View } from "react-native";
 
 import { useChat } from "@/components/ChatProvider";
 import type { MessageType } from "@/lib/mock";
-import { colors } from "@/lib/theme";
 
 interface Props {
   message: MessageType;
@@ -20,16 +20,14 @@ export function EmojiStaggerLesson({ message }: Props) {
           styles.message,
           message.from === "me" ? styles.messageMe : styles.messageThem,
         ]}
-        onPress={() => setCurrentPopupId(message.id)}
-      >
+        onPress={() => setCurrentPopupId(message.id)}>
         <Text
           style={[
             styles.messageText,
             message.from === "me"
               ? styles.messageTextMe
               : styles.messageTextThem,
-          ]}
-        >
+          ]}>
           {message.message}
         </Text>
       </Pressable>
@@ -72,13 +70,13 @@ const styles = StyleSheet.create({
   },
   messageMe: {
     alignSelf: "flex-end",
-    backgroundColor: colors.accent,
+    backgroundColor: "#782AEB",
   },
   messageThem: {
     alignSelf: "flex-start",
     backgroundColor: "white",
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: colors.border,
+    borderColor: "#C1C6E5",
   },
   emojiPopupContainer: {
     position: "absolute",
@@ -89,7 +87,7 @@ const styles = StyleSheet.create({
   emojiPopupWrapper: {
     top: -45,
     height: 50,
-    backgroundColor: colors.overlay,
+    backgroundColor: "rgba(98, 98, 98, 0.6)",
     borderRadius: 999,
     paddingHorizontal: 16,
   },
