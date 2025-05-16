@@ -1,16 +1,12 @@
 # Emoji Stagger
 
-In this lesson we'll build an emoji popup animation. This pattern is commonly used in chat-like applications to add a reaction to a message. We're going to use Gesture Handler to implement a long press gesture, shared values, timings, useAnimatedStyle and Reanimated's [Layout Animations](https://docs.swmansion.com/react-native-reanimated/docs/category/layout-animations) for the stagger animation. 
+In this lesson we'll build an emoji popup animation. This pattern is commonly used in chat-like applications to add a reaction to a message. We're going to use Gesture Handler to implement a long press gesture, shared values, timings, useAnimatedStyle and Reanimated's [Layout Animations](https://docs.swmansion.com/react-native-reanimated/docs/category/layout-animations) for the stagger animation.
 
 https://github.com/software-mansion-labs/appjs-2024-workshop-reanimated/assets/39658211/f98f1dd7-6ffc-40e7-b0a0-b7b8a51e00ea
 
-
 ## Step 1 – Shrink a message on long press
 
-
 https://github.com/software-mansion-labs/appjs-2024-workshop-reanimated/assets/39658211/7d0ae5e0-0b2d-4d9b-9184-15604953ffa9
-
-
 
 <details>
 <summary>
@@ -25,8 +21,8 @@ https://github.com/software-mansion-labs/appjs-2024-workshop-reanimated/assets/3
 </summary>
 
 ```jsx
-import Animated from 'react-native-reanimated';
-import { GestureDetector } from 'react-native-gesture-handler';
+import Animated from "react-native-reanimated";
+import { GestureDetector } from "react-native-gesture-handler";
 
 <GestureDetector>
   <Animated.View
@@ -36,8 +32,9 @@ import { GestureDetector } from 'react-native-gesture-handler';
     ]}>
     {/*  */}
   </Animated.View>
-</GestureDetector>
+</GestureDetector>;
 ```
+
 </details>
 
 <details>
@@ -78,10 +75,11 @@ const longPress = Gesture.LongPress()
 Shared value is a current state of an animation.
 
 ```jsx
-import { useSharedValue } from 'react-native-reanimated';
+import { useSharedValue } from "react-native-reanimated";
 
 const pressed = useSharedValue(false);
 ```
+
 </details>
 
 <details>
@@ -99,6 +97,7 @@ const longPress = Gesture.LongPress()
     pressed.value = false;
   });
 ```
+
 </details>
 
 <details>
@@ -108,16 +107,16 @@ Animate the element's scale using <code>useAnimatedStyle</code> and <code>withTi
 
 ```jsx
 const animatedStyles = useAnimatedStyle(() => ({
-  transform: [
-    { scale: withTiming(pressed.value ? 0.96 : 1) },
-  ],
+  transform: [{ scale: withTiming(pressed.value ? 0.96 : 1) }],
 }));
 
 <Animated.View
   style={[
     styles.message,
-    animatedStyles            // <------------ right here
-  ]}>{/*  */}</Animated.View>
+    animatedStyles, // <------------ right here
+  ]}>
+  {/*  */}
+</Animated.View>;
 ```
 
 </details>
@@ -125,7 +124,6 @@ const animatedStyles = useAnimatedStyle(() => ({
 </details>
 
 ## Step 2 – Show emojis using layout animations
-
 
 https://github.com/software-mansion-labs/appjs-2024-workshop-reanimated/assets/39658211/e0e081fb-15c1-4d6d-9e72-80edff36ed9f
 
@@ -157,7 +155,7 @@ https://github.com/software-mansion-labs/appjs-2024-workshop-reanimated/assets/3
 <Animated.View
   entering={FadeInDown} // <----- here
   style={[styles.emojiPopupWrapper, styles.shadow]}>
-  <Animated.View 
+  <Animated.View
     entering={FadeInRight} // <----- here
     style={styles.emojiPopup}>
     {emojis.map((emoji) => (
@@ -171,12 +169,12 @@ https://github.com/software-mansion-labs/appjs-2024-workshop-reanimated/assets/3
   </Animated.View>
 </Animated.View>
 ```
+
 </details>
 
 <details>
 <summary>
 <b>[3]</b> Add <code>FadeOutDown</code> exiting animation to the <code>emojiPopupWrapper</code>
-
 
 </summary>
 
@@ -189,14 +187,9 @@ https://github.com/software-mansion-labs/appjs-2024-workshop-reanimated/assets/3
 
 </details>
 
-
-
 ## Step 3 – The stagger effect
 
-
-
 https://github.com/software-mansion-labs/appjs-2024-workshop-reanimated/assets/39658211/cdf5e6b4-79cc-4659-b27c-59692af90f95
-
 
 <details>
 <summary>
@@ -211,7 +204,6 @@ https://github.com/software-mansion-labs/appjs-2024-workshop-reanimated/assets/3
 ```
 
 </details>
-
 
 <details>
 <summary>
@@ -229,11 +221,12 @@ Multiply the array <code>index</code> times the delay inside <code>.delay()</cod
 <Animated.Text
   entering={ZoomIn.delay(33 * i + 100)}>
 ```
+
 </details>
 
 <details>
 <summary>
-Use <code>.springify()</code> modifier to emphasize the effect 
+Use <code>.springify()</code> modifier to emphasize the effect
 </summary>
 
 ```jsx
@@ -244,12 +237,7 @@ Use <code>.springify()</code> modifier to emphasize the effect
     .stiffness(200)
     .damping(10)}>
 ```
-</details>
 
 </details>
 
-
-
-## Next step
-
-**Go to: [Skia Theme Curtain](../SkiaThemeCurtain/)**
+</details>

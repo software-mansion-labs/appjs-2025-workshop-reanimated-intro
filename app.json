@@ -13,6 +13,7 @@
     },
     "scheme": "appjsworkshop2025",
     "ios": {
+      "usesAppleSignIn": true,
       "supportsTablet": true,
       "bundleIdentifier": "com.anonymous.appjsworkshop2025",
       "infoPlist": {
