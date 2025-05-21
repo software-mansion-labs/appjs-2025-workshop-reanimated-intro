@@ -6,13 +6,13 @@ type RouteMeta = {
 
 export const routes: RouteMeta[] = [
   {
-    href: "CSSTransitions",
-    title: "CSS Transitions 👉",
+    href: "CSSAnimations",
+    title: "CSS Animations 👉",
     subtitle: "Lesson 1",
   },
   {
-    href: "CSSAnimations",
-    title: "CSS Animations 👉",
+    href: "CSSTransitions",
+    title: "CSS Transitions 👉",
     subtitle: "Lesson 2",
   },
   {
