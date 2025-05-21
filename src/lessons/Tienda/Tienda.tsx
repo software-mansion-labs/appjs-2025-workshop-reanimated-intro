@@ -214,6 +214,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     paddingTop: 10,
     paddingHorizontal: 8,
+    marginBottom: 8,
   },
   priceRow: {
     flexDirection: "row",
