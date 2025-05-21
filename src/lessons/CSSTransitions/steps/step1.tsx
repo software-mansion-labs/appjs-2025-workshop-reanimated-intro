@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   selectSizeButtonBackground: {
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 1,
     borderColor: "#0f172a",
     zIndex: -1,
     position: "absolute",
