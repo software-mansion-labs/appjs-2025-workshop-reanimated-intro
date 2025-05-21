@@ -10,10 +10,8 @@ https://github.com/user-attachments/assets/f1cfee5c-a516-480a-bdfc-eb9cb29bf844
 
 <details>
 <summary>
-  <b>[1]</b> Change the `View` wrapping an Icon component to an `Animated.View` with an empty `style` prop
+  <b>[1]</b> Change the `View` wrapping an Icon component to an `Animated.View` .Make sure to import `Animated` from `react-native-reanimated` package.
 </summary>
-
-Make sure the Animated is imported as a default import from `react-native-reanimated` package.
 
 ```jsx
 import Animated from "react-native-reanimated";
