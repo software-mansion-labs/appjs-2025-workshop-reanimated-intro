@@ -11,23 +11,28 @@ export const routes: RouteMeta[] = [
     subtitle: "Lesson 1",
   },
   {
-    href: "CSSAnimationsBasics",
-    title: "CSS Animations Basics 👉",
+    href: "CSSAnimations",
+    title: "CSS Animations 👉",
     subtitle: "Lesson 2",
+  },
+  {
+    href: "Tienda",
+    title: "Tienda 👉",
+    subtitle: "Lesson 3",
   },
   {
     href: "CircleGestures",
     title: "Circle Gestures 👉",
-    subtitle: "Lesson 3",
+    subtitle: "Lesson 4",
   },
   {
     href: "BalloonSlider",
     title: "Balloon Slider 👉",
-    subtitle: "Lesson 4",
+    subtitle: "Lesson 5",
   },
   {
     href: "EmojiStagger",
     title: "EmojiStagger 👉",
-    subtitle: "Lesson 5",
+    subtitle: "Lesson 6",
   },
 ];
