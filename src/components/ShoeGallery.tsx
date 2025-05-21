@@ -1,9 +1,9 @@
 import { Dimensions, FlatList, Image, StyleSheet, View } from "react-native";
 
 const gallery = [
-  "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/2529146/pexels-photo-2529146.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  require("../../assets/shoe-1.jpg"),
+  require("../../assets/shoe-2.jpg"),
+  require("../../assets/shoe-3.jpg"),
 ];
 
 export function ShoeGallery() {
@@ -11,9 +11,7 @@ export function ShoeGallery() {
     <View style={styles.gallery}>
       <FlatList
         data={gallery}
-        renderItem={({ item }) => (
-          <Image source={{ uri: item }} style={styles.image} />
-        )}
+        renderItem={({ item }) => <Image source={item} style={styles.image} />}
         keyExtractor={(item) => item}
         horizontal
         showsHorizontalScrollIndicator={false}
