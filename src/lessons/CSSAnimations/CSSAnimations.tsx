@@ -27,7 +27,7 @@ export function Star({ size = 16 }) {
   );
 }
 
-export function CSSAnimations() {
+export function CSSAnimationsLesson() {
   return (
     <Container>
       <View style={{ flex: 1, justifyContent: "center" }}>

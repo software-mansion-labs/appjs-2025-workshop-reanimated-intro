@@ -1,5 +1,5 @@
-import { Tienda } from "@/lessons/Tienda";
+import { TiendaLesson } from "@/lessons/Tienda";
 
 export default function Page() {
-  return <Tienda />;
+  return <TiendaLesson />;
 }

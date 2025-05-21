@@ -1,7 +1,6 @@
 import { ShoeDetails } from "@/components/ShoeDetails";
 import { ShoeGallery } from "@/components/ShoeGallery";
 import EvilIcons from "@expo/vector-icons/EvilIcons";
-import Octicons from "@expo/vector-icons/Octicons";
 import { useRef, useState } from "react";
 import {
   Dimensions,
@@ -14,6 +13,7 @@ import {
 import Animated from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Star } from "../CSSAnimations";
+import { SelectSizeButton } from "../CSSTransitions";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
@@ -142,46 +142,7 @@ function Details() {
   );
 }
 
-function SelectSizeButton() {
-  const [pressed, setPressed] = useState(false);
-
-  return (
-    <Pressable
-      onPressIn={() => setPressed(true)}
-      onPressOut={() => setPressed(false)}
-    >
-      <View style={styles.selectSizeButton}>
-        <Text style={styles.selectSizeButtonText}>Select Size</Text>
-        <Animated.View
-          style={{
-            transitionDuration: 150,
-            transitionTimingFunction: "ease-in",
-            transitionProperty: "transform",
-            transform: [{ translateX: pressed ? 6 : 0 }],
-          }}
-        >
-          <Octicons name="arrow-right" size={24} color="white" />
-        </Animated.View>
-      </View>
-      <Animated.View
-        style={[
-          styles.buttonBackground,
-          {
-            transitionDuration: 150,
-            transitionTimingFunction: "ease-in",
-            transitionProperty: "transform",
-            transform: [
-              { translateX: pressed ? 0 : 4 },
-              { translateY: pressed ? -38 : -34 },
-            ],
-          },
-        ]}
-      />
-    </Pressable>
-  );
-}
-
-export function Tienda() {
+export function TiendaLesson() {
   const insets = useSafeAreaInsets();
 
   return (
@@ -253,28 +214,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     paddingTop: 10,
     paddingHorizontal: 8,
-  },
-  selectSizeButton: {
-    backgroundColor: "#0f172a",
-    padding: 10,
-    paddingRight: 16,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  buttonBackground: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: "#0f172a",
-    height: 38,
-    zIndex: -1,
-  },
-  selectSizeButtonText: {
-    color: "white",
-    fontSize: 18,
-    fontFamily: "Menlo",
-    fontWeight: "bold",
-    textTransform: "uppercase",
-    letterSpacing: 1.5,
   },
   priceRow: {
     flexDirection: "row",

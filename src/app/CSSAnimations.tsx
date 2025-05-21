@@ -1,5 +1,5 @@
-import { CSSAnimations } from "@/lessons/CSSAnimations";
+import { CSSAnimationsLesson } from "@/lessons/CSSAnimations";
 
 export default function Page() {
-  return <CSSAnimations />;
+  return <CSSAnimationsLesson />;
 }
