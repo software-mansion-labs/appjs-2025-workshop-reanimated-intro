@@ -90,4 +90,4 @@ During the workshop we will be using primarily:
 
 ## Next step
 
-**Go to: [CSSTransitions](./src/lessons/CSSTransitions/)**
+**Go to: [CSSAnimations](./src/lessons/CSSAnimations/)**
