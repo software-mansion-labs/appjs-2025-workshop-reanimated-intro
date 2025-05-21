@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import Octicons from "@expo/vector-icons/Octicons";
 import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import Animated from "react-native-reanimated";
 
 export function SelectSizeButton() {
   const [layout, setLayout] = useState({ width: 0, height: 0 });
@@ -17,14 +18,30 @@ export function SelectSizeButton() {
         onLayout={(e) => setLayout(e.nativeEvent.layout)}
       >
         <Text style={styles.selectSizeButtonText}>Select Size</Text>
-        <View>
+        <Animated.View
+          style={{
+            transitionProperty: "transform",
+            transitionDuration: 150,
+            transform: [{ translateX: pressed ? 5 : 0 }],
+            transitionTimingFunction: "ease-in",
+          }}
+        >
           <Octicons name="arrow-right" size={24} color="white" />
-        </View>
+        </Animated.View>
       </View>
-      <View
+      <Animated.View
         style={[
           styles.selectSizeButtonBackground,
           { width: layout.width, height: layout.height },
+          {
+            transitionProperty: "transform",
+            transitionDuration: 150,
+            transform: [
+              { translateX: pressed ? -5 : 0 },
+              { translateY: pressed ? -5 : 0 },
+            ],
+            transitionTimingFunction: "ease-in",
+          },
         ]}
       />
     </Pressable>
