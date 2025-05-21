@@ -2,7 +2,13 @@
 
 ## Step 1
 
-_VIDEO PLACEHOLDER_
+
+
+
+https://github.com/user-attachments/assets/c7b5ff97-54d0-4b49-a8e0-d03be69e7bf9
+
+
+
 
 <details>
 <summary>
