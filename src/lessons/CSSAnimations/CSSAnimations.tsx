@@ -5,7 +5,7 @@ import { View } from "react-native";
 
 export function Star({ size = 16 }) {
   return (
-    <View>
+    <View style={{}}>
       <Icon name="star" size={size} color="#475569" />
     </View>
   );

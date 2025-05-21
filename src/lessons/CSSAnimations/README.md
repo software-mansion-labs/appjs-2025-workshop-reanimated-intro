@@ -1,48 +1,96 @@
-# CSS Animations Basics
+# CSS Animations
 
-## Step 1
+The newest feature of React Native Reanimated 4 that's frequently used for spinners, skeleton loaders, and microanimations triggered by a state change.
+
+In this lesson you're going to implement a shake animation using CSS Animations. This type of animation draws user's attention to part of the UI.
+
+## Step 1 - Create a shake animation using CSS Animations
 
 _VIDEO PLACEHOLDER_
 
 <details>
 <summary>
-  <b>[1]</b> Step 1
+  <b>[1]</b> Change the `View` wrapping an Icon component to an `Animated.View` with an empty `style` prop
 </summary>
 
+Make sure the Animated is imported as a default import from `react-native-reanimated` package.
+
 ```jsx
-tbd;
+import Animated from "react-native-reanimated";
+
+export function Star({ size = 16 }) {
+  return (
+    <Animated.View style={{}}>
+      <Icon name="star" size={size} color="#475569" />
+    </Animated.View>
+  );
+}
 ```
 
 </details>
 <br />
-<details>
-<summary>
-  <b>[2]</b> step 2
-</summary>
-  <br/>
-<details>
 
+<details>
 <summary>
-step 1.1
+  <b>[2]</b> Add `animationName` to `style` of the `Animated.View`. Add keyframes (pass a JavaScript object) that defines rotation the view slightly from left to right from `0%` to `100%` every `20%` or so. You'll need to use `transform` for this. Also, set `animationDuration` to `2.5s`.
 </summary>
+<br/>
+Play around with the animation as you like. The following snippet is just an example.
 
 ```jsx
-tbd;
+<Animated.View
+  style={{
+    animationName: {
+      "0%": { transform: [{ rotate: "0deg" }] },
+      "15%": { transform: [{ rotate: "7deg" }] },
+      "20%": { transform: [{ rotate: "-10deg" }] },
+      "25%": { transform: [{ rotate: "10deg" }] },
+      "35%": { transform: [{ rotate: "-7deg" }] },
+      "40%": { transform: [{ rotate: "0deg" }] },
+      "100%": { transform: [{ rotate: "0deg" }] },
+    },
+    animationDuration: "2.5s",
+  }}
+>
 ```
 
 </details>
+<br />
+
 <details>
 <summary>
-step 1.2
+  <b>[3]</b> Make the animation repeat indefinitely.
 </summary>
 
 ```jsx
-tbd;
+<Animated.View
+  style={{
+    // ...
+    animationIterationCount: "infinite",
+  }}
+>
 ```
 
 </details>
+<br />
+
+<details>
+<summary>
+  <b>[4]</b> Use `animationTimingFunction` of your choice.
+</summary>
+
+```jsx
+<Animated.View
+  style={{
+    // ...
+    animationTimingFunction: "ease-in-out",
+  }}
+>
+```
+
 </details>
+<br />
 
 ## Next step
 
-**Go to: [Circle Gestures](../CircleGestures/)**
+**Go to: [CSS Transitions](../CSSTransitions/)**
