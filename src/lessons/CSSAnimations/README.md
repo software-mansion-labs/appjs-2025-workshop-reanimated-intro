@@ -6,7 +6,7 @@ In this lesson you're going to implement a shake animation using CSS Animations.
 
 ## Step 1 - Create a shake animation using CSS Animations
 
-_VIDEO PLACEHOLDER_
+https://github.com/user-attachments/assets/f1cfee5c-a516-480a-bdfc-eb9cb29bf844
 
 <details>
 <summary>
