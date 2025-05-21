@@ -5,6 +5,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import Animated from "react-native-reanimated";
 
 export function SelectSizeButton() {
+  const [layout, setLayout] = useState({ width: 0, height: 0 });
   const [pressed, setPressed] = useState(false);
 
   return (
@@ -12,14 +13,17 @@ export function SelectSizeButton() {
       onPressIn={() => setPressed(true)}
       onPressOut={() => setPressed(false)}
     >
-      <View style={styles.selectSizeButton}>
+      <View
+        style={styles.selectSizeButton}
+        onLayout={(e) => setLayout(e.nativeEvent.layout)}
+      >
         <Text style={styles.selectSizeButtonText}>Select Size</Text>
         <Animated.View
           style={{
             transitionDuration: 150,
             transitionTimingFunction: "ease-in",
             transitionProperty: "transform",
-            transform: [{ translateX: pressed ? 6 : 0 }],
+            transform: [{ translateX: pressed ? 5 : 0 }],
           }}
         >
           <Octicons name="arrow-right" size={24} color="white" />
@@ -27,14 +31,15 @@ export function SelectSizeButton() {
       </View>
       <Animated.View
         style={[
-          styles.buttonBackground,
+          styles.selectSizeButtonBackground,
+          { width: layout.width, height: layout.height },
           {
             transitionDuration: 150,
             transitionTimingFunction: "ease-in",
             transitionProperty: "transform",
             transform: [
-              { translateX: pressed ? 0 : 4 },
-              { translateY: pressed ? -38 : -34 },
+              { translateX: pressed ? -5 : 0 },
+              { translateY: pressed ? -5 : 0 },
             ],
           },
         ]}
@@ -67,11 +72,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-  buttonBackground: {
+  selectSizeButtonBackground: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: "#0f172a",
-    height: 38,
     zIndex: -1,
+    position: "absolute",
+    top: 5,
+    left: 5,
   },
   selectSizeButtonText: {
     color: "white",
