@@ -2,7 +2,7 @@
 
 This lesson reinforces the learning from the first two examples in a real-life scenario. We'll use [CSS Transitions](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-transitions) to create the header animation and [CSS Animations](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-animations) for an animation that draws user attention.
 
-## Step 1 – Animate the header when focused
+## Step 1 – Animate the header on search bar focus
 
 
 
@@ -31,7 +31,7 @@ import Animated from 'react-native-reanimated';
 
 <details>
 <summary>
-  <b>[2]</b> When the search bar is focused, the header should fade out and slide up by the height of the header. Use <code>transitionProperty</code> to animate <code>opacity</code> and <code>marginTop</code> properties. Don't forget to set <code>transitionDuration</code>. Optionally use <code>transitionTimingFunction</code> to control the animation timing.
+  <b>[2]</b> When the search bar is focused, the header should fade out and slide up by the height of the header. Use <code>transitionProperty</code> to animate <code>opacity</code> and <code>marginTop</code> properties. Don't forget to set <code>transitionDuration</code>.
 </summary>
 
 <br/>
@@ -152,6 +152,9 @@ function Header() {
 </details>
 
 <br/>
+
+## Step 2 – Animate a fake border around a view 
+
 
 ## Next step
 
