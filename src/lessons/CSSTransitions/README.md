@@ -6,6 +6,10 @@ https://github.com/user-attachments/assets/c7b5ff97-54d0-4b49-a8e0-d03be69e7bf9
 
 ## Step 1 - Move the arrow to the right on press
 
+
+https://github.com/user-attachments/assets/c3221460-8789-4e64-ad59-255291a08fe4
+
+
 <details>
 <summary>
   <b>[1]</b> Change the <code>View</code> wrapping the Icon to <code>Animated.View</code>
