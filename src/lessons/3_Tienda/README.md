@@ -153,7 +153,7 @@ function Header() {
 
 <br/>
 
-## Step 2 – Animate a fake border around a view 
+## Step 2 – Animate a border around a view 
 
 
 https://github.com/user-attachments/assets/7bb86557-053f-4ba0-9eb7-792de1be748d
