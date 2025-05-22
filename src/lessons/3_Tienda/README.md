@@ -313,7 +313,7 @@ function Details() {
 
 Make the border animation alternate between running twice, pausing for 2 seconds, and running again.
 
-Leaving it as an exercise to the reader ;) 
+The implementation is left as an exercise for the reader ;) 
 
 ## Next step
 
