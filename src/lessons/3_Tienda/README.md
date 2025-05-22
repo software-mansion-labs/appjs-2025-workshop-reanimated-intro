@@ -131,7 +131,7 @@ function Header() {
 
 <details>
 <summary>
-  <b>[6]</b> Adjust the <code>transitionTimingFunction</code>.
+  <b>[6]</b> Set the same <code>transitionTimingFunction</code> as for the cancel button.
 </summary>
 
 <br/>
