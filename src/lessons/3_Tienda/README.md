@@ -309,6 +309,11 @@ function Details() {
 
 <br/>
 
+## [BONUS] Step 3 - Alternating border animation
+
+Make the border animation alternate between running twice, pausing for 2 seconds, and running again.
+
+Leaving it as an exercise to the reader ;) 
 
 ## Next step
 
