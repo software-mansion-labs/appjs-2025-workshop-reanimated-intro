@@ -1,5 +1,5 @@
 import { Container } from "@/components/Container";
-import Octicons from "@expo/vector-icons/Octicons";
+import Icon from "@expo/vector-icons/Octicons";
 import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
@@ -18,7 +18,7 @@ export function SelectSizeButton() {
       >
         <Text style={styles.selectSizeButtonText}>Select Size</Text>
         <View>
-          <Octicons name="arrow-right" size={24} color="white" />
+          <Icon name="arrow-right" size={24} color="white" />
         </View>
       </View>
       <View

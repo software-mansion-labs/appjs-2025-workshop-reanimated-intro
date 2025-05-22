@@ -18,7 +18,7 @@ https://github.com/user-attachments/assets/c3221460-8789-4e64-ad59-255291a08fe4
 import Animated from "react-native-reanimated";
 
 <Animated.View>
-  <Octicons name="arrow-right" size={24} color="white" />
+  <Icon name="arrow-right" size={24} color="white" />
 </Animated.View>
 ```
 
@@ -39,7 +39,7 @@ import Animated from "react-native-reanimated";
     transform: [{ translateX: pressed ? 5 : 0 }],
   }}
 >
-  <Octicons name="arrow-right" size={24} color="white" />
+  <Icon name="arrow-right" size={24} color="white" />
 </Animated.View>
 ```
 
@@ -59,7 +59,7 @@ import Animated from "react-native-reanimated";
     transitionTimingFunction: "ease-in",
   }}
 >
-  <Octicons name="arrow-right" size={24} color="white" />
+  <Icon name="arrow-right" size={24} color="white" />
 </Animated.View>
 ```
 

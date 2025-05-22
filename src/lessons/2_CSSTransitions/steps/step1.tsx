@@ -1,5 +1,5 @@
 import { Container } from "@/components/Container";
-import Octicons from "@expo/vector-icons/Octicons";
+import Icon from "@expo/vector-icons/Octicons";
 import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import Animated from "react-native-reanimated";
@@ -26,7 +26,7 @@ export function SelectSizeButton() {
             transitionTimingFunction: "ease-in",
           }}
         >
-          <Octicons name="arrow-right" size={24} color="white" />
+          <Icon name="arrow-right" size={24} color="white" />
         </Animated.View>
       </View>
       <View
