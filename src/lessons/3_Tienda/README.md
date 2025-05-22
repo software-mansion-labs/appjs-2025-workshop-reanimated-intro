@@ -159,6 +159,46 @@ function Header() {
 https://github.com/user-attachments/assets/7bb86557-053f-4ba0-9eb7-792de1be748d
 
 
+<details>
+<summary>
+  <b>[1]</b> Measure the dimenstions of the popular container. Save the dimensions to a state. You can use the built-in <code>onLayout</code> property. 
+</summary>
+
+<br/>
+
+```jsx
+function Details() {
+  const [dimenstions, setDimensions] = useState({ width: 0, height: 0 });
+  return (
+    <View style={styles.content}>
+      <View
+        style={styles.popularContainer}
+        onLayout={(event) => setDimensions(event.nativeEvent.layout)}
+      >
+      {/* ... */}
+  )
+}
+```
+
+</details>
+
+<br/>
+
+<details>
+<summary>
+  <b>[2]</b> Define a new absolutely positioned <code>View</code> that's 2 pixels wider and higher than the popular container. Offset it by 1 pixel to the left and up. This View <b>must appear below</b> the popular container.
+</summary>
+
+<br/>
+
+```jsx
+
+```
+
+</details>
+
+<br/>
+
 
 ## Next step
 
