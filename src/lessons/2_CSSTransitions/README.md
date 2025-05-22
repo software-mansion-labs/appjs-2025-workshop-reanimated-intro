@@ -1,11 +1,10 @@
 # CSS Transitions
 
-In this lesson we're going to use [CSS Transitions](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-transitions) to to make a simple button animation on press.
+[CSS Transitions](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-transitions) instead of keyframes animate properties based on the state change.
 
-https://github.com/user-attachments/assets/c7b5ff97-54d0-4b49-a8e0-d03be69e7bf9
+In this lesson we're going to use CSS Transitions to to make a simple button animation on press.
 
 ## Step 1 - Move the arrow to the right on press
-
 
 https://github.com/user-attachments/assets/c3221460-8789-4e64-ad59-255291a08fe4
 
