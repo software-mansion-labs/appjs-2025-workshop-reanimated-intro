@@ -1,54 +1,98 @@
 # CSS Transitions
 
-## Step 1
-
-
-
+In this lesson we're going to use [CSS Transitions](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-transitions) to animate a button on press.
 
 https://github.com/user-attachments/assets/c7b5ff97-54d0-4b49-a8e0-d03be69e7bf9
 
-
-
+## Step 1 - Move the arrow to the right on press
 
 <details>
 <summary>
-  <b>[1]</b> Step 1
+  <b>[1]</b> Change the <code>View</code> wrapping the Icon to <code>Animated.View</code>
 </summary>
 
 ```jsx
-tbd;
+import Animated from "react-native-reanimated";
+
+<Animated.View>
+  <Octicons name="arrow-right" size={24} color="white" />
+</Animated.View>
 ```
 
 </details>
 <br />
+
 <details>
 <summary>
-  <b>[2]</b> step 2
+  <b>[2]</b> On button press, move the arrow icon 5 px to the right. Use the <code>transform</code> property. Set the duration of the transition to 150 ms. Adjust the timing function of the transition to your liking.
 </summary>
   <br/>
 <details>
 
-<summary>
-step 1.1
-</summary>
-
 ```jsx
-tbd;
+<Animated.View
+  style={{
+    transitionProperty: "transform",
+    transitionDuration: 150,
+    transform: [{ translateX: pressed ? 5 : 0 }],
+    transitionTimingFunction: "ease-in",
+  }}
+>
+  <Octicons name="arrow-right" size={24} color="white" />
+</Animated.View>
 ```
 
 </details>
+<br/>
+
+## Step 2 - Animate the button background on press
+
+https://github.com/user-attachments/assets/c7b5ff97-54d0-4b49-a8e0-d03be69e7bf9
+
 <details>
 <summary>
-step 1.2
+  <b>[1]</b> Change the <code>View</code> wrapping the select size button to an <code>Animated.View</code>
 </summary>
 
 ```jsx
-tbd;
+<Animated.View
+  style={[
+    styles.selectSizeButtonBackground,
+    { width: layout.width, height: layout.height },
+  ]}
+/>
 ```
 
 </details>
+<br />
+
+<details>
+<summary>
+  <b>[2]</b> Move the button 5 px to the left and up on press. Set the duration of the transition to 150 ms.
+</summary>
+
+```jsx
+<Animated.View
+  style={[
+    styles.selectSizeButtonBackground,
+    { width: layout.width, height: layout.height },
+    {
+      transitionProperty: "transform",
+      transitionDuration: 150,
+      transform: [
+        { translateX: pressed ? -5 : 0 },
+        { translateY: pressed ? -5 : 0 },
+      ],
+      transitionTimingFunction: "ease-in",
+    },
+  ]}
+/>
+```
+
 </details>
+<br />
+
 
 ## Next step
 
-**Go to: [CSS Animations Basics](../CSSAnimationsBasics/)**
+**Go to: [Tienda](../Tienda/)**
