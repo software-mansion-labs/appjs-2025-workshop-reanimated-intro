@@ -91,4 +91,4 @@ Play around with the animation as you like. The following snippet is just an exa
 
 ## Next step
 
-**Go to: [CSS Transitions](../CSSTransitions/)**
+**Go to: [CSS Transitions](../2_CSSTransitions/)**

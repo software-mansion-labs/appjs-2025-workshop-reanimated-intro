@@ -615,4 +615,4 @@ Just check [steps/final.tsx](./steps/final.tsx) – this is the final step 🤷
 
 ## Next step
 
-**Go to: [Emoji Stagger](../EmojiStagger/)**
+**Go to: [Emoji Stagger](../6_EmojiStagger/)**

@@ -90,4 +90,4 @@ During the workshop we will be using primarily:
 
 ## Next step
 
-**Go to: [CSSAnimations](./src/lessons/CSSAnimations/)**
+**Go to: [CSSAnimations](./src/lessons/1_CSSAnimations/)**
