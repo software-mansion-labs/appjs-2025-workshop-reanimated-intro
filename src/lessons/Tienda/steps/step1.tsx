@@ -41,7 +41,7 @@ function Header() {
             transitionDuration: 200,
             transitionTimingFunction: "ease-in-out",
             opacity: isFocused ? 0 : 1,
-            marginTop: isFocused ? -headerHeight! : 0,
+            marginTop: isFocused && headerHeight ? -headerHeight : 0,
           },
         ]}
         onLayout={(event) => {
