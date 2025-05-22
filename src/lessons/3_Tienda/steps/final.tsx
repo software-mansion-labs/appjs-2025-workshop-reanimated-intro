@@ -91,13 +91,13 @@ function Header() {
 }
 
 function Details() {
-  const [dimenstions, setDimensions] = useState({ width: 0, height: 0 });
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   return (
     <View style={styles.content}>
       <View
         style={{
-          width: dimenstions.width + 2,
-          height: dimenstions.height + 2,
+          width: dimensions.width + 2,
+          height: dimensions.height + 2,
           position: "absolute",
           top: -1,
           left: -1,
@@ -108,10 +108,10 @@ function Details() {
         <Animated.View
           style={{
             width: 20,
-            height: dimenstions.width / 2 + 2,
+            height: dimensions.width / 2 + 2,
             transformOrigin: "10px 0",
             backgroundColor: "#0f172a",
-            top: dimenstions.height / 2,
+            top: dimensions.height / 2,
 
             animationName: {
               "0%": { transform: [{ rotateZ: "0deg" }] },
