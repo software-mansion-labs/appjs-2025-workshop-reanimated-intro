@@ -27,7 +27,6 @@ import Animated from "react-native-reanimated";
   <b>[2]</b> On button press, move the arrow icon 5 px to the right. Use the <code>transform</code> property. Set the duration of the transition to 150 ms. Adjust the timing function of the transition to your liking.
 </summary>
   <br/>
-<details>
 
 ```jsx
 <Animated.View
