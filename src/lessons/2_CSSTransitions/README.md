@@ -1,6 +1,6 @@
 # CSS Transitions
 
-[CSS Transitions](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-transitions) instead of keyframes animate properties based on the state change.
+[CSS Transitions](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-transitions) instead of keyframes animate the properties based on the state change.
 
 In this lesson we're going to use CSS Transitions to to make a simple button animation on press.
 
