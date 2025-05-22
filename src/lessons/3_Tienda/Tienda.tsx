@@ -1,7 +1,7 @@
 import { ShoeDetails } from "@/components/ShoeDetails";
 import { ShoeGallery } from "@/components/ShoeGallery";
-import { Star } from "@/lessons/CSSAnimations";
-import { SelectSizeButton } from "@/lessons/CSSTransitions";
+import { Star } from "@/lessons/1_CSSAnimations";
+import { SelectSizeButton } from "@/lessons/2_CSSTransitions";
 import EvilIcons from "@expo/vector-icons/EvilIcons";
 import { useRef, useState } from "react";
 import {

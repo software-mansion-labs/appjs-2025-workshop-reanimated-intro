@@ -1,7 +1,7 @@
 import { ShoeDetails } from "@/components/ShoeDetails";
 import { ShoeGallery } from "@/components/ShoeGallery";
-import { Star } from "@/lessons/CSSAnimations";
-import { SelectSizeButton } from "@/lessons/CSSTransitions";
+import { Star } from "@/lessons/1_CSSAnimations";
+import { SelectSizeButton } from "@/lessons/2_CSSTransitions";
 import EvilIcons from "@expo/vector-icons/EvilIcons";
 import { useRef, useState } from "react";
 import {
@@ -12,7 +12,10 @@ import {
   TextInput,
   View,
 } from "react-native";
+import Animated from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+
+const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 function Header() {
   const [isFocused, setFocus] = useState(false);
@@ -30,8 +33,17 @@ function Header() {
 
   return (
     <>
-      <View
-        style={styles.header}
+      <Animated.View
+        style={[
+          styles.header,
+          {
+            transitionProperty: ["opacity", "marginTop"],
+            transitionDuration: 200,
+            transitionTimingFunction: "ease-in-out",
+            opacity: isFocused ? 0 : 1,
+            marginTop: isFocused && headerHeight ? -headerHeight : 0,
+          },
+        ]}
         onLayout={(event) => {
           if (headerHeight === undefined) {
             setHeaderHeight(event.nativeEvent.layout.height);
@@ -39,7 +51,7 @@ function Header() {
         }}
       >
         <Text style={styles.headerText}>tienda</Text>
-      </View>
+      </Animated.View>
       <View style={styles.searchBarWrapper}>
         <View style={styles.searchBar}>
           <EvilIcons name="search" size={24} color="#64748b" />
@@ -52,7 +64,19 @@ function Header() {
             style={styles.searchBarTextInput}
           />
         </View>
-        <Pressable onPress={handleCancel} style={styles.button}>
+        <AnimatedPressable
+          onPress={handleCancel}
+          style={[
+            styles.button,
+            {
+              transitionProperty: ["width", "marginLeft"],
+              transitionDuration: 200,
+              transitionTimingFunction: "ease-in-out",
+              width: isFocused ? 50 : 0,
+              marginLeft: isFocused ? 8 : 0,
+            },
+          ]}
+        >
           <Text
             style={styles.buttonText}
             numberOfLines={1}
@@ -60,7 +84,7 @@ function Header() {
           >
             Cancel
           </Text>
-        </Pressable>
+        </AnimatedPressable>
       </View>
     </>
   );

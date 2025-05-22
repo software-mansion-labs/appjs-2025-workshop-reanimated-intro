@@ -1,6 +1,6 @@
 import { FlatList, StyleSheet } from "react-native";
 
-import { EmojiStaggerLesson as Message } from "@/lessons/EmojiStagger/EmojiStagger";
+import { EmojiStaggerLesson as Message } from "@/lessons/6_EmojiStagger/EmojiStagger";
 import { messages } from "@/lib/mock";
 
 export function Chat() {
