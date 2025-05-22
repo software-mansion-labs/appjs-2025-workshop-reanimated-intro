@@ -1,6 +1,6 @@
 # Tienda
 
-This lesson facilitates the learning from first two examples in a real-life UI. We'll use [CSS Transitions](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-transitions) to create the header animation and [CSS Animations](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-animations) for an animation that draws user attention to an element.
+This lesson reinforces the learning from the first two examples in a real-life scenario. We'll use [CSS Transitions](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-transitions) to create the header animation and [CSS Animations](https://docs.swmansion.com/react-native-reanimated/docs/next/category/css-animations) for an animation that draws user attention.
 
 ## Step 1 – Animate the header when focused
 
