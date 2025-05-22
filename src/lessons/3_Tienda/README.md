@@ -17,6 +17,8 @@ https://github.com/user-attachments/assets/f94432e6-ebf4-4e0a-ace3-dfd839e9d6de
 <br/>
 
 ```jsx
+import Animated from 'react-native-reanimated';
+
 <Animated.View
   style={styles.header}
   {/* ... */}
@@ -62,8 +64,6 @@ https://github.com/user-attachments/assets/f94432e6-ebf4-4e0a-ace3-dfd839e9d6de
 <br/>
 
 ```jsx
-import Animated from 'react-native-reanimated';
-
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 function Header() {
