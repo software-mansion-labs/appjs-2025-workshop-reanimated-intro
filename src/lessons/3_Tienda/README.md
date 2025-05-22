@@ -5,8 +5,8 @@ This lesson reinforces the learning from the first two examples in a real-life s
 ## Step 1 – Animate the header on search bar focus
 
 
+https://github.com/user-attachments/assets/551b39c8-ee74-4164-a0a2-0a4192fe77d4
 
-https://github.com/user-attachments/assets/f94432e6-ebf4-4e0a-ace3-dfd839e9d6de
 
 
 <details>
@@ -154,6 +154,10 @@ function Header() {
 <br/>
 
 ## Step 2 – Animate a fake border around a view 
+
+
+https://github.com/user-attachments/assets/7bb86557-053f-4ba0-9eb7-792de1be748d
+
 
 
 ## Next step
