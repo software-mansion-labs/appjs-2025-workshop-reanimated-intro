@@ -37,6 +37,25 @@ import Animated from "react-native-reanimated";
     transitionProperty: "transform",
     transitionDuration: 150,
     transform: [{ translateX: pressed ? 5 : 0 }],
+  }}
+>
+  <Octicons name="arrow-right" size={24} color="white" />
+</Animated.View>
+```
+
+</details>
+<br/>
+
+<details>
+<summary>
+  <b>[3]</b> Adjust the timing function of the transition to your liking.
+</summary>
+  <br/>
+
+```jsx
+<Animated.View
+  style={{
+    {/* ... */}
     transitionTimingFunction: "ease-in",
   }}
 >
@@ -85,6 +104,24 @@ https://github.com/user-attachments/assets/c7b5ff97-54d0-4b49-a8e0-d03be69e7bf9
         { translateX: pressed ? -5 : 0 },
         { translateY: pressed ? -5 : 0 },
       ],
+    },
+  ]}
+/>
+```
+
+</details>
+<br />
+
+<details>
+<summary>
+  <b>[3]</b> To make the animation consistent set the same tranisition timing function as for the arrow. 
+</summary>
+
+```jsx
+<Animated.View
+  style={[
+    {
+      {/* ... */}
       transitionTimingFunction: "ease-in",
     },
   ]}
