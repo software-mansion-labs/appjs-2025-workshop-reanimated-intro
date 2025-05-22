@@ -89,7 +89,7 @@ https://github.com/user-attachments/assets/c7b5ff97-54d0-4b49-a8e0-d03be69e7bf9
 
 <details>
 <summary>
-  <b>[2]</b> Move the button 5 px to the left and up on press. Set the duration of the transition to 150 ms.
+  <b>[2]</b> Move the button 5 px to the left and up on press. Use the <code>transform</code> property. Set the duration of the transition to 150 ms.
 </summary>
 
 ```jsx
