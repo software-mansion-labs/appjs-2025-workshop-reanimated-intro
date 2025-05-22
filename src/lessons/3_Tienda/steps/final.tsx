@@ -98,8 +98,9 @@ function Details() {
         style={{
           width: dimenstions.width + 2,
           height: dimenstions.height + 2,
-          transform: [{ translateX: -1 }, { translateY: -1 }],
           position: "absolute",
+          top: -1,
+          left: -1,
           overflow: "hidden",
           alignItems: "center",
         }}

@@ -186,7 +186,7 @@ function Details() {
 
 <details>
 <summary>
-  <b>[2]</b> Define a new absolutely positioned <code>View</code> that's 2 pixels wider and higher than the popular container. Offset it by 1 pixel to the left and up. This View <b>must appear below</b> the popular container.
+  <b>[2]</b> Define a new absolutely positioned <code>View</code> that's 2 pixels wider and higher than the popular container. Offset it by 1 pixel to the left and up. This view <b>must <i>appear</i> below</b> the popular container.
 </summary>
 
 <br/>
@@ -195,7 +195,111 @@ function Details() {
 
 
 ```jsx
+<View style={styles.content}>
+  <View
+    style={{
+      position: "absolute",
+      top: -1,
+      left: -1,
+      width: dimenstions.width + 2,
+      height: dimenstions.height + 2,
+    }}
+  >
+  {/* we'll add some more stuff here in a moment :)*/}
+  </View>
+  <View
+    style={styles.popularContainer}
+    onLayout={(event) => setDimensions(event.nativeEvent.layout)}
+    {/* ... */}
 
+```
+
+</details>
+
+<br/>
+
+<details>
+<summary>
+  <b>[3]</b> Inside that wiew add a black rectangle with height of <code>500</code> , <code>20</code> width. Make the shorter edge centered within the parent. Also, set <code>transformOrigin</code> to <code>"10px 0"</code>.
+</summary>
+
+<br/>
+
+```jsx
+<View
+  style={{
+    {/* ... */}
+    alignItems: "center",
+  }}
+>
+  <View
+    style={{
+      width: 20,
+      height: 500,
+      backgroundColor: "#0f172a",
+      top: dimenstions.height / 2,
+      transformOrigin: "10px 0",
+    }}
+  />
+</View>
+```
+
+</details>
+
+<br/>
+
+<details>
+<summary>
+  <b>[4]</b> Using CSS Animations rotate the rectangle. One revolution should take 4 seconds. Make sure the animation is <code>linear</code> and runs indefinitely.
+</summary>
+
+<br/>
+
+```jsx
+<View
+  style={{
+    {/* ... */}
+  }}
+>
+  <Animated.View
+    style={{
+      {/* ... */}
+      animationName: {
+        "0%": { transform: [{ rotateZ: "0deg" }] },
+        "100%": { transform: [{ rotateZ: "360deg" }] },
+      },
+      animationDuration: "4s",
+      animationTimingFunction: "linear",
+      animationIterationCount: "infinite",
+    }}
+  />
+</View>
+```
+
+</details>
+
+<br/>
+
+<details>
+<summary>
+  <b>[5]</b> Finish off the animation by setting the <code>overflow</code> property to <code>"hidden"</code> on the wrapping view.
+</summary>
+
+<br/>
+
+```jsx
+<View
+  style={{
+    {/* ... */}
+    overflow: "hidden",
+  }}
+>
+  <Animated.View
+    style={{
+      {/* ... */}
+    }}
+  />
+</View>
 ```
 
 </details>
