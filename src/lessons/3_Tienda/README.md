@@ -11,7 +11,7 @@ https://github.com/user-attachments/assets/551b39c8-ee74-4164-a0a2-0a4192fe77d4
 
 <details>
 <summary>
-  <b>[1]</b> Change the header <code>View</code> to an <code>Animated.View</code>
+  <b>[1]</b> Change the header <code>View</code> to an <code>Animated.View</code>.
 </summary>
 
 <br/>
@@ -161,14 +161,14 @@ https://github.com/user-attachments/assets/7bb86557-053f-4ba0-9eb7-792de1be748d
 
 <details>
 <summary>
-  <b>[1]</b> Measure the dimenstions of the popular container. Save the dimensions to a state. You can use the built-in <code>onLayout</code> property. 
+  <b>[1]</b> Measure the dimensions of the popular container. Save the dimensions to a state. You can use the built-in <code>onLayout</code> property. 
 </summary>
 
 <br/>
 
 ```jsx
 function Details() {
-  const [dimenstions, setDimensions] = useState({ width: 0, height: 0 });
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   return (
     <View style={styles.content}>
       <View
