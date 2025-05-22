@@ -93,7 +93,7 @@ function Header() {
 function Details() {
   return (
     <View style={styles.content}>
-      <View style={styles.popular}>
+      <View style={styles.popularContainer}>
         <Star />
         <Text style={styles.popularText}>
           <Text style={styles.popularTextBold}>Popular</Text>! This item is
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: 4,
   },
-  popular: {
+  popularContainer: {
     backgroundColor: "#f1f5f9",
     flexDirection: "row",
     padding: 6,

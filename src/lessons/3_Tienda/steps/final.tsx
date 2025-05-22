@@ -123,7 +123,7 @@ function Details() {
         />
       </View>
       <View
-        style={styles.popular}
+        style={styles.popularContainer}
         onLayout={(event) => setDimensions(event.nativeEvent.layout)}
       >
         <Star />
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: 4,
   },
-  popular: {
+  popularContainer: {
     backgroundColor: "#f1f5f9",
     flexDirection: "row",
     padding: 6,
