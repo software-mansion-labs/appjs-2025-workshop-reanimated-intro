@@ -11,7 +11,25 @@ https://github.com/user-attachments/assets/f94432e6-ebf4-4e0a-ace3-dfd839e9d6de
 
 <details>
 <summary>
-  <b>[1]</b> When the search bar is focused, the header should fade out and slide up using CSS Transitions. Change the <code>View</code> to an <code>Animated.View</code>, use <code>transitionProperty</code> to animate <code>opacity</code> and <code>marginTop</code> properties. Don't forget to set <code>transitionDuration</code>. Optionally use <code>transitionTimingFunction</code> to control the animation timing.
+  <b>[1]</b> Change the header <code>View</code> to an <code>Animated.View</code>
+</summary>
+
+<br/>
+
+```jsx
+<Animated.View
+  style={styles.header}
+  {/* ... */}
+>
+```
+
+</details>
+
+<br/>
+
+<details>
+<summary>
+  <b>[2]</b> When the search bar is focused, the header should fade out and slide up. Use <code>transitionProperty</code> to animate <code>opacity</code> and <code>marginTop</code> properties. Don't forget to set <code>transitionDuration</code>. Optionally use <code>transitionTimingFunction</code> to control the animation timing.
 </summary>
 
 <br/>
@@ -38,7 +56,7 @@ https://github.com/user-attachments/assets/f94432e6-ebf4-4e0a-ace3-dfd839e9d6de
 
 <details>
 <summary>
-  <b>[2]</b> Use <code>createAnimatedComponent</code> to define an animatable Pressable.
+  <b>[3]</b> Use <code>createAnimatedComponent</code> to define an animatable Pressable.
 </summary>
 
 <br/>
@@ -63,7 +81,7 @@ function Header() {
 
 <details>
 <summary>
-  <b>[3]</b> Animate the <code>width</code> of the Cancel button from <code>0</code> to <code>50</code> when search bar is focused. Also, animate <code>marginLeft</code> from <code>0</code> to <code>8</code> to adjust the position of the button. Use <code>transitionProperty</code>, <code>transitionDuration</code> and <code>transitionTimingFunction</code> to control the transition.
+  <b>[4]</b> Animate the <code>width</code> of the Cancel button from <code>0</code> to <code>50</code> when search bar is focused. Also, animate <code>marginLeft</code> from <code>0</code> to <code>8</code> to adjust the position of the button. Use <code>transitionProperty</code>, <code>transitionDuration</code> and <code>transitionTimingFunction</code> to control the transition.
 </summary>
 
 <br/>
