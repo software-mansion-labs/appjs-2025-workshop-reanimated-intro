@@ -4,6 +4,11 @@ This lesson reinforces the learning from the first two examples in a real-life s
 
 ## Step 1 – Animate the header when focused
 
+
+
+https://github.com/user-attachments/assets/f94432e6-ebf4-4e0a-ace3-dfd839e9d6de
+
+
 <details>
 <summary>
   <b>[1]</b> When the search bar is focused, the header should fade out and slide up using CSS Transitions. Change the <code>View</code> to an <code>Animated.View</code>, use <code>transitionProperty</code> to animate <code>opacity</code> and <code>marginTop</code> properties. Don't forget to set <code>transitionDuration</code>. Optionally use <code>transitionTimingFunction</code> to control the animation timing.
