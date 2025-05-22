@@ -220,10 +220,13 @@ function Details() {
 
 <details>
 <summary>
-  <b>[3]</b> Inside that wiew add a black rectangle with height of <code>500</code> , <code>20</code> width. Make the shorter edge centered within the parent. Also, set <code>transformOrigin</code> to <code>"10px 0"</code>.
+  <b>[3]</b> Inside that view add a black rectangle with height of <code>500</code> , <code>20</code> width. Make the shorter edge centered within the parent. Also, set <code>transformOrigin</code> to <code>"10px 0"</code>.
 </summary>
 
 <br/>
+
+![centered-rectangle](https://github.com/user-attachments/assets/be532bd0-1cb7-49e3-b89f-f161c030a111)
+
 
 ```jsx
 <View
