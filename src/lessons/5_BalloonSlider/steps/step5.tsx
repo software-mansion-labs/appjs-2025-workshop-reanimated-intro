@@ -19,14 +19,15 @@ import Animated, {
 export function BalloonSliderLesson() {
   const x = useSharedValue(0);
   const progress = useSharedValue(0);
-  const knobScale = useSharedValue(0);
+  const scale = useSharedValue(0);
 
   const aRef = useAnimatedRef<View>();
 
   const panGesture = Gesture.Pan()
     .averageTouches(true)
+    .activateAfterLongPress(1)
     .onStart(() => {
-      knobScale.value = withSpring(1);
+      scale.value = withSpring(1);
     })
     .onChange((ev) => {
       const size = measure(aRef);
@@ -34,13 +35,13 @@ export function BalloonSliderLesson() {
       progress.value = 100 * (x.value / size.width);
     })
     .onEnd(() => {
-      knobScale.value = withSpring(0);
+      scale.value = withSpring(0);
     });
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
       borderWidth: interpolate(
-        knobScale.value,
+        scale.value,
         [0, 1],
         [layout.knobSize / 2, 2],
         Extrapolation.CLAMP
@@ -50,7 +51,7 @@ export function BalloonSliderLesson() {
           translateX: x.value,
         },
         {
-          scale: knobScale.value + 1,
+          scale: scale.value + 1,
         },
       ],
     };
@@ -62,13 +63,13 @@ export function BalloonSliderLesson() {
 
   const balloonStyle = useAnimatedStyle(() => {
     return {
-      opacity: knobScale.value,
+      opacity: scale.value,
       transform: [
         { translateX: balloonSpringyX.value },
-        { scale: knobScale.value },
+        { scale: scale.value },
         {
           translateY: interpolate(
-            knobScale.value,
+            scale.value,
             [0, 1],
             [0, -layout.indicatorSize]
           ),

@@ -209,36 +209,20 @@ We then use the defined animated style in the view that represents the balloon:
   <b>[3]</b> Add appear/disappear effect: animated y-position to slide up/down, scale, and opacity.
 </summary>
 
-We create a secondary shared value to control the balloon scale that's initially set to 0.
+You can reuse the `scale` shared value to control the balloon scale that's initially set to 0.
 Then we update it along the scale shared value used for the knob:
-
-```ts
-const balloonScale = useSharedValue(0);
-
-const tapGesture = Gesture.Tap()
-  .maxDuration(100000)
-  .onBegin(() => {
-    scale.value = withSpring(2);
-    balloonScale.value = withSpring(1);
-  })
-  .onEnd(() => {
-    scale.value = withSpring(1);
-    balloonScale.value = withSpring(0);
-  });
-```
-
 We update balloon's animated styles and use the scale value to interpolate y-transition, opacity and the scale:
 
 ```ts
 const balloonStyle = useAnimatedStyle(() => {
   return {
-    opacity: balloonScale.value,
+    opacity: scale.value,
     transform: [
       { translateX: x.value },
-      { scale: balloonScale.value },
+      { scale: scale.value },
       {
         translateY: interpolate(
-          balloonScale.value,
+          scale.value,
           [0, 1],
           [0, -layout.indicatorSize]
         ),
