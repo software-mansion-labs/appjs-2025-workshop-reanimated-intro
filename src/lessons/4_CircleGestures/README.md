@@ -21,7 +21,7 @@ const tapGesture = Gesture.Tap()
 
 </details>
 <br />
-<details>
+<details open>
 <summary>
   <b>[2]</b> `tapGesture` should set a scale value based on which we are going to animate the knob. When gesture ends, we are bringing back the scale to the initial value
 </summary>
@@ -120,7 +120,7 @@ const panGesture = Gesture.Pan();
 
 </details>
 <br/>
-<details>
+<details open>
 <summary>
   <b>[2]</b> `panGesture` should set a `x` value based on which we are going to move/animate the knob. When gesture ends, we are bringing back the `x` to the initial value (0)
 </summary>
@@ -216,7 +216,7 @@ https://user-images.githubusercontent.com/2805320/236633812-e237aa2f-3608-4e26-b
 
 remove `tapGesture` and use just the `panGesture` as gesture on `GestureDetector`. Create an `isInteracting` shared value and replace the `scale` with a `derivedValue` that's going to animate using `withSpring()` based on `isInteracting` value.
 
-<details>
+<details open>
 <summary>
   <b>[1]</b> Create an `isInteracting` shared value and replace the `scale` with a `derivedValue` that's going to animate using `withSpring()` based on `isInteracting` value.
 </summary>
