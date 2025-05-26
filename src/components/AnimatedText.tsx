@@ -45,5 +45,6 @@ export function AnimatedText({
 const styles = StyleSheet.create({
   text: {
     color: "black",
+    fontVariant: ["tabular-nums"],
   },
 });
