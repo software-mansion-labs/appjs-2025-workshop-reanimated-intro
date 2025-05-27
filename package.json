@@ -25,12 +25,12 @@
     "react": "19.0.0",
     "react-native": "0.79.2",
     "react-native-gesture-handler": "~2.24.0",
-    "react-native-reanimated": "^4.0.0-nightly-20250513-896f6e7a7",
+    "react-native-reanimated": "^4.0.0-nightly-20250526-210f7bf5d",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "^4.10.0",
     "react-native-section-list-get-item-layout": "^2.2.3",
     "react-native-svg": "15.11.2",
-    "react-native-worklets": "^0.3.0-nightly-20250514-511b42bc3"
+    "react-native-worklets": "^0.4.0-nightly-20250526-210f7bf5d"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
