@@ -31,14 +31,14 @@ Follow one of the sections below for detailed instructions.
 
 ### For iOS simulator
 
-1. Download Development Client build [from this link](https://expo.dev/artifacts/eas/fxsDygCnbNwWmxztJnbsRF.tar.gz)
+1. Download Development Client build [from this link](http://appjs.local/reanimated/appjs-2025.tar.gz)
 1. Extract `AppjsWorkshop2025.app` file from the downloaded archive
 1. Launch your iOS simulator
 1. Drag and drop the `.app` file onto the simulator
 
 ### For Android emulator
 
-1. Download Development Client build [from this link](https://expo.dev/artifacts/eas/taz1dB8XU6UbAhYHJhRdrU.apk)
+1. Download Development Client build [from this link](http://appjs.local/reanimated/appjs-2025.apk)
 1. Launch Android emulator on your computer
 1. Drag and drop the downloaded `.apk` file onto emulator
 
