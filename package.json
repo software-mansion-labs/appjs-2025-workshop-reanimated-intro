@@ -29,7 +29,7 @@
     "react-native-screens": "^4.10.0",
     "react-native-section-list-get-item-layout": "^2.2.3",
     "react-native-svg": "15.11.2",
-    "react-native-worklets": "^0.4.0-nightly-20250526-210f7bf5d"
+    "react-native-worklets": "^0.4.0-nightly-20250527-db5ca6b57"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
